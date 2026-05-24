@@ -1,0 +1,17 @@
+{
+  "name": "repro-nuxt-og-image-shared-runtime-alias",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "nuxi prepare",
+    "typecheck": "nuxi typecheck",
+    "build": "nuxi build"
+  },
+  "devDependencies": {
+    "@takumi-rs/core": "1.5.0",
+    "nuxt": "4.4.6",
+    "nuxt-og-image": "6.5.1",
+    "typescript": "~5.9.0",
+    "vue-tsc": "~3.0.0"
+  }
+}
