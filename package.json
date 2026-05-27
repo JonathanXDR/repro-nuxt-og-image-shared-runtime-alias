@@ -4,14 +4,15 @@
   "type": "module",
   "scripts": {
     "postinstall": "nuxi prepare",
-    "typecheck": "nuxi typecheck",
-    "build": "nuxi build"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "typecheck": "nuxi typecheck"
   },
   "devDependencies": {
     "@takumi-rs/core": "1.5.0",
     "nuxt": "4.4.6",
     "nuxt-og-image": "6.5.1",
-    "typescript": "~5.9.0",
-    "vue-tsc": "~3.0.0"
+    "typescript": "6.0.3",
+    "vue-tsc": "3.3.2"
   }
 }

@@ -1,8 +1,11 @@
 <script setup lang="ts">
-// This import is the exact line the `npx nuxt-og-image create` CLI emits
-// (see node_modules/nuxt-og-image/dist/cli.mjs:57) and the line that breaks:
-//   - typecheck: TS2307 "Cannot find module '#og-image/app/utils'"
-//   - nuxi build: vite:load-fallback ENOENT on dist/shared/runtime/app/utils
+// This is the exact import line the `npx nuxt-og-image create` CLI emits
+// when scaffolding a takumi component
+// (node_modules/nuxt-og-image/dist/cli.mjs:57). It is also the line that
+// breaks:
+//   - `nuxi typecheck` → TS2307 "Cannot find module '#og-image/app/utils'"
+//   - `nuxi build`     → vite:load-fallback ENOENT on
+//                        dist/shared/runtime/app/utils
 import { useOgImageRuntimeConfig } from '#og-image/app/utils'
 
 const runtimeConfig = useOgImageRuntimeConfig()
