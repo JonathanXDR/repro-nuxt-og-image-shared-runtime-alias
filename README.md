@@ -3,7 +3,7 @@
 Minimal Nuxt 4 project showing that a takumi OG component scaffolded with the
 official CLI imports `#og-image/app/utils`, which the module's own
 `#og-image` alias points at a directory that does not exist in the published
-package. Typecheck fails with TS2307; production build fails with
+package. Typecheck fails with TS2307. Production build fails with
 `vite:load-fallback ENOENT`.
 
 ## Steps to reproduce
@@ -54,7 +54,7 @@ package layout (hashed bundle chunks) but does not contain the
 ```
 
 That directory contains only hashed bundle chunks
-(`nuxt-og-image.*.mjs`) — no `runtime/app/utils.{js,d.ts}`. The actual
+(`nuxt-og-image.*.mjs`) and no `runtime/app/utils.{js,d.ts}`. The actual
 runtime tree is at `node_modules/nuxt-og-image/dist/runtime/`.
 
 The CLI rewrite step that produces the broken import is in
